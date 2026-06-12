@@ -10,6 +10,7 @@ class Nota extends Model
     use SoftDeletes;
     protected $fillable = [
         'nota', 
-        'cor'
+        'cor',
+        'imagem'
     ];
 }

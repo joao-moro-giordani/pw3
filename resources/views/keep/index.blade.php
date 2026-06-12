@@ -16,6 +16,10 @@
                 style="background-color: {{ $nota['cor'] }}; padding: 10px; margin-bottom: 10px; border: 1px solid; border-radius: 5px; width: 300px;">
                 {{ $nota['nota'] }}
                 <br><br>
+                @if ($nota['imagem'])
+                    <img src="{{ asset("storage/".$nota['imagem']) }}" alt="" width="200">
+                @endif
+                <br><br>
                 Criada: {{ \Carbon\Carbon::parse($nota['created_at'])->diffForHumans() }}
                 @if ($nota['updated_at'] != $nota['created_at'])
                     <br>
